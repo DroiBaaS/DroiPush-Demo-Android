@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- resource used in demo -->
+    <string name="app_name">DroiPushDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_add_tag">添加标签</string>
+    <string name="text_del_tag">删除标签</string>
+    <string name="text_silent_setting">静默时间</string>
+    <string name="text_tag_hint">tag可以为数字、字母或者中文构成，使用逗号分隔</string>
+    <string name="text_silent_setting_title">设置静默时间段</string>
+    <string name="text_push_state_hint">推送状态: <xliff:g id="state">%s</xliff:g></string>
+    <string name="text_push_state_enable">开启</string>
+    <string name="text_push_state_disable">关闭</string>
+    <string name="text_ok">确定</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_no_tag">暂无标签</string>
+    <string name="text_no_silent_time">暂无静默时间设置</string>
+
+</resources>

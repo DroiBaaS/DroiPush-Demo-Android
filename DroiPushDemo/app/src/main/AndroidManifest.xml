@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.droi.sdk.pushdemo"
+    android:versionCode="1"
+    android:versionName="1.01" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <!-- permission used in core sdk -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- app info start -->
+        <meta-data
+            android:name="com.droi.sdk.secret_key"
+            android:value="72z08yea" >
+        </meta-data>
+        <meta-data
+            android:name="com.droi.sdk.application_id"
+            android:value="he8umbzh4Hpx3PzGXR7LwGYZ8jM5Ke70lQAXo5QP" >
+        </meta-data>
+        <meta-data
+            android:name="com.droi.sdk.channel_name"
+            android:value="DROI_CHANNEL" />
+        <meta-data
+            android:name="com.droi.sdk.platform_key"
+            android:value="aTqHWZ9eEy7mbOLD1EG18VZoLRAuHGu18VZoLRAu" />
+        <!-- app info end -->
+
+        <!-- main activity of demo -->
+        <activity
+            android:name="com.droi.sdk.pushdemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- demo activity to test open activity message -->
+        <activity android:name="com.droi.sdk.pushdemo.OpenActivityDemo" />
+
+    </application>
+
+</manifest>
