@@ -8,6 +8,7 @@ android {
         applicationId "com.droi.sdk.pushdemo"
         minSdkVersion 15
         targetSdkVersion 19
+        manifestPlaceholders = [DROI_PUSH_APPID: 'he8umbzh4Hpx3PzGXR7LwGYZ8jM5Ke70lQAXo5QP']
     }
 
     buildTypes {
@@ -28,7 +29,6 @@ repositories {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.droi.sdk:Core:+'
-    compile 'com.droi.sdk:Utility:+'
     compile 'com.droi.sdk:push:+'
     compile 'com.squareup.okhttp3:okhttp:3.0.1'
     compile 'com.android.support:support-v4:23.2.1'

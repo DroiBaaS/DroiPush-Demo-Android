@@ -17,7 +17,7 @@ public class MyApplication extends Application {
     }
 
     private void initWork() {
-        DroiPush.initialize(getApplicationContext());
+        DroiPush.initialize(getApplicationContext(), "mPLacKCAdUHTvCAfoetOpWlgIkUbINovUcrUCW4tjkzZGjgwqkjjzAlTKtjcrEkO");
         DroiPush.setMessageHandler(new DroiMessageHandler() {
 
             @Override

@@ -2,20 +2,20 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:scrollbars="vertical" >
+    android:scrollbars="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp" >
+        android:paddingRight="5dp">
 
         <TableLayout
             android:id="@+id/account_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:shrinkColumns="1" >
+            android:shrinkColumns="1">
 
             <TableRow>
 
@@ -26,21 +26,6 @@
 
                 <TextView
                     android:id="@+id/appid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textIsSelectable="true" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text="appSecret: " />
-
-                <TextView
-                    android:id="@+id/appsecret"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textIsSelectable="true" />
@@ -81,12 +66,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:shrinkColumns="1"
-            android:stretchColumns="0" >
+            android:shrinkColumns="0"
+            android:stretchColumns="0">
 
             <TableRow
                 android:paddingBottom="5dp"
-                android:paddingTop="5dp" >
+                android:paddingTop="5dp">
 
                 <TextView
                     android:id="@+id/push_state"
@@ -105,67 +90,116 @@
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="15dp"
                 android:paddingBottom="5dp"
-                android:paddingTop="5dp" >
+                android:paddingTop="5dp">
 
                 <TextView
                     android:id="@+id/silent_viewer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/text_no_silent_time"
                     android:minHeight="30dp" />
 
-                <Button
-                    android:id="@+id/silence_setting"
+
+                <LinearLayout
+                    android:id="@+id/silent_btn_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/blue_btn"
-                    android:text="@string/text_silent_setting"
-                    android:textColor="@android:color/white" />
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/set_silent_time_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/blue_btn"
+                        android:text="@string/text_set_silence_time"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/clear_silent_time_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/blue_btn"
+                        android:text="@string/text_clear_silence_time"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
             </TableRow>
 
             <TableRow
                 android:paddingBottom="5dp"
-                android:paddingTop="5dp" >
+                android:paddingTop="15dp">
 
                 <TextView
                     android:id="@+id/tags_viewer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="5dp"
-                    android:gravity="center"
-                    android:hint="@string/text_no_tag"
-                    android:minHeight="30dp" />
+                    android:minHeight="30dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" />
 
                 <LinearLayout
                     android:id="@+id/tag_btn_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/add_tag"
+                        android:id="@+id/replace_tag"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
                         android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
                         android:background="@drawable/blue_btn"
-                        android:text="@string/text_add_tag"
+                        android:text="@string/text_replace_tag"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/append_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_btn"
+                        android:text="@string/text_append_tag"
                         android:textColor="@android:color/white" />
 
                     <Button
                         android:id="@+id/del_tag"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_btn"
+                        android:text="@string/text_delete_tag"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/query_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:background="@drawable/blue_btn"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:text="@string/text_del_tag"
+                        android:text="@string/text_query_tag"
                         android:textColor="@android:color/white" />
                 </LinearLayout>
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
 
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </LinearLayout>
 </ScrollView>
